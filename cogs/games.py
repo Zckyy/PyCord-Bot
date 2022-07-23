@@ -28,7 +28,13 @@ class Games(commands.Cog): # create a class for our cog that inherits from comma
         if int(guess) == correctAnswer:
             await ctx.send('You guessed it!')
         else:
-            await ctx.send('Nope, try again.')
+            await ctx.send(f'The answer was {correctAnswer}, try again.')
+            
+    @discord.command()
+    async def dice(self, ctx, dice: int):
+        """Type the number of sides you want your dice to be. Roll and see what you land on."""
+        diceRoll = random.randint(1, dice)
+        await ctx.respond(f"You rolled a {diceRoll}.")
     
     #Gaydar
     @discord.user_command()
