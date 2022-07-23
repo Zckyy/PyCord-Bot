@@ -9,11 +9,13 @@ bot = discord.Bot()
 @bot.event
 async def on_ready():
     print(f"{bot.user} is ready and online!")
+    await bot.change_presence(activity=discord.Game(name="https://github.com/Zckyy"))
     
 # Array of cogs
 cogs_list = [
     'greetings',
     'games',
+    'misc',
 ]
 
 #Loading all cogs in Array

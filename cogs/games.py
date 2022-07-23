@@ -11,6 +11,8 @@ class Games(commands.Cog): # create a class for our cog that inherits from comma
     #Coinflip
     @discord.slash_command()
     async def coinflip(self, ctx):
+        """Flip a coin, see what you land on."""
+
         coin = ["Heads","Tails"]
         coinflip = random.choice(coin)
         await ctx.respond(f"{coinflip}!")
@@ -18,7 +20,7 @@ class Games(commands.Cog): # create a class for our cog that inherits from comma
     #Get-the-Number
     @discord.command()
     async def gtn(self, ctx, guess):
-        """A Slash Command to play a Guess-the-Number game."""
+        """Guess a number between 1 and 10."""
         
         correctAnswer = random.randint(0,10)
         print(f"The generated correct answer is: {correctAnswer}")
