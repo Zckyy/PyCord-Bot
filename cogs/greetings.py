@@ -9,10 +9,14 @@ class Greetings(commands.Cog): # create a class for our cog that inherits from c
 
     @discord.slash_command()
     async def hello(self, ctx):
+        """Say goodbye to the bot."""
+
         await ctx.respond('Hello!')
 
     @discord.slash_command()
     async def goodbye(self, ctx):
+        """Say hello to the bot."""
+
         await ctx.respond('Goodbye!')
         
     @discord.user_command()
